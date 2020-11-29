@@ -72,6 +72,7 @@
             // 
             this.textID.Font = new System.Drawing.Font("굴림", 10F);
             this.textID.Location = new System.Drawing.Point(154, 87);
+            this.textID.MaxLength = 12;
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(100, 23);
             this.textID.TabIndex = 3;
@@ -80,6 +81,7 @@
             // 
             this.textPwd.Font = new System.Drawing.Font("굴림", 10F);
             this.textPwd.Location = new System.Drawing.Point(154, 142);
+            this.textPwd.MaxLength = 12;
             this.textPwd.Name = "textPwd";
             this.textPwd.PasswordChar = '●';
             this.textPwd.Size = new System.Drawing.Size(100, 23);

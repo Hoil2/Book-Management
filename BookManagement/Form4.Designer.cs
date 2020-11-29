@@ -51,6 +51,7 @@
             // textID
             // 
             this.textID.Location = new System.Drawing.Point(131, 27);
+            this.textID.MaxLength = 12;
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(100, 21);
             this.textID.TabIndex = 0;
@@ -58,6 +59,7 @@
             // textName
             // 
             this.textName.Location = new System.Drawing.Point(131, 66);
+            this.textName.MaxLength = 4;
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(100, 21);
             this.textName.TabIndex = 1;
@@ -65,6 +67,7 @@
             // textBirth
             // 
             this.textBirth.Location = new System.Drawing.Point(131, 102);
+            this.textBirth.MaxLength = 8;
             this.textBirth.Name = "textBirth";
             this.textBirth.Size = new System.Drawing.Size(100, 21);
             this.textBirth.TabIndex = 2;
@@ -196,6 +199,7 @@
             // textAdress
             // 
             this.textAdress.Location = new System.Drawing.Point(131, 170);
+            this.textAdress.MaxLength = 60;
             this.textAdress.Multiline = true;
             this.textAdress.Name = "textAdress";
             this.textAdress.Size = new System.Drawing.Size(197, 33);

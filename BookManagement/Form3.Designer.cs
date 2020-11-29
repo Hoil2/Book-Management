@@ -63,6 +63,7 @@
             // textPhone3
             // 
             this.textPhone3.Location = new System.Drawing.Point(251, 132);
+            this.textPhone3.MaxLength = 4;
             this.textPhone3.Name = "textPhone3";
             this.textPhone3.Size = new System.Drawing.Size(50, 21);
             this.textPhone3.TabIndex = 14;
@@ -71,6 +72,7 @@
             // textPhone2
             // 
             this.textPhone2.Location = new System.Drawing.Point(174, 132);
+            this.textPhone2.MaxLength = 4;
             this.textPhone2.Name = "textPhone2";
             this.textPhone2.Size = new System.Drawing.Size(50, 21);
             this.textPhone2.TabIndex = 13;
@@ -99,6 +101,7 @@
             // textPhone1
             // 
             this.textPhone1.Location = new System.Drawing.Point(104, 132);
+            this.textPhone1.MaxLength = 3;
             this.textPhone1.Name = "textPhone1";
             this.textPhone1.Size = new System.Drawing.Size(50, 21);
             this.textPhone1.TabIndex = 10;
@@ -107,6 +110,7 @@
             // textID
             // 
             this.textID.Location = new System.Drawing.Point(104, 73);
+            this.textID.MaxLength = 12;
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(120, 21);
             this.textID.TabIndex = 9;
