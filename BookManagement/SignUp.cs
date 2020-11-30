@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BookManagement
 {
-    public partial class Form4 : Form
+    public partial class SignUp : Form
     {
-        public Form4()
+        public SignUp()
         {
             InitializeComponent();
         }
@@ -41,7 +41,9 @@ namespace BookManagement
             }
             else
             {
-                using (StreamWriter writer = new StreamWriter(@"D:\test\newCus.txt"))
+                DirectoryInfo di = new DirectoryInfo(@"Customer");
+                if(!di.Exists) di.Create();
+                using (StreamWriter writer = new StreamWriter(@"Customer\newCus.txt"))
                 {
                     writer.WriteLine(textID.Text);
                     writer.WriteLine(textName.Text);
@@ -52,11 +54,11 @@ namespace BookManagement
                     writer.WriteLine(textAdress.Text);
                     writer.WriteLine("---------------------");
                 }
-                using (StreamWriter writer = new StreamWriter(@"D:\test\CusId.txt"))
+                using (StreamWriter writer = new StreamWriter(@"Customer\CusId.txt"))
                 {
                     writer.WriteLine(textID.Text);
                 }
-                using (StreamWriter writer = new StreamWriter(@"D:\test\CusFindId.txt"))
+                using (StreamWriter writer = new StreamWriter(@"Customer\CusFindId.txt"))
                 {
                     writer.WriteLine(textName.Text);
                     writer.WriteLine(textPhone1.Text + " - " + textPhone2.Text + "-" + textPhone3.Text);
@@ -74,9 +76,12 @@ namespace BookManagement
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-           
-
-            using (StreamReader reader = new StreamReader(@"D:\test\CusId.txt"))
+            DirectoryInfo di = new DirectoryInfo(@"Customer");
+            if (!di.Exists)
+            {
+                MessageBox.Show("사용 가능한 아이디입니다", "아이디 확인"); return;
+            }
+            using (StreamReader reader = new StreamReader(@"Customer\CusId.txt"))
             {
                 string id;
 

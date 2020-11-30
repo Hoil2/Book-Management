@@ -11,9 +11,11 @@ using System.Windows.Forms;
 
 namespace BookManagement
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : Form
     {
-        public Form1()
+        public bool successLogin;
+        public bool close;
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -22,30 +24,37 @@ namespace BookManagement
         {
             if(textID.Text == "123" && textPwd.Text == "123")
             {
-                MessageBox.Show("응", "로그인 성공");
+                successLogin = true;
+                Close();
             }
             else
             {
+                successLogin = false;
                 MessageBox.Show("올바른 아이디 또는 패스워드를 입력하세요", "로그인 실패");
             }
         }
 
         private void findIDbtn_Click(object sender, EventArgs e)
         {
-            Form2 FormID = new Form2();
+            FindID FormID = new FindID();
             FormID.ShowDialog();
         }
 
         private void findPwdbtn_Click(object sender, EventArgs e)
         {
-            Form3 FormPwd = new Form3();
+            FindPW FormPwd = new FindPW();
             FormPwd.ShowDialog();
         }
 
         private void newbtn_Click(object sender, EventArgs e)
         {
-            Form4 FormNew = new Form4();
+            SignUp FormNew = new SignUp();
             FormNew.ShowDialog();
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            close = true;
         }
     }
 }

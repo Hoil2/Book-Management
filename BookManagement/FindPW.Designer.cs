@@ -1,6 +1,6 @@
 ﻿namespace BookManagement
 {
-    partial class Form3
+    partial class FindPW
     {
         /// <summary>
         /// Required designer variable.

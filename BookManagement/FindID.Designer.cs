@@ -1,6 +1,6 @@
 ﻿namespace BookManagement
 {
-    partial class Form2
+    partial class FindID
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace BookManagement
 {
-    partial class Form4
+    partial class SignUp
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BookManagement
 {
-    public partial class Form3 : Form
+    public partial class FindPW : Form
     {
-        public Form3()
+        public FindPW()
         {
             InitializeComponent();
         }

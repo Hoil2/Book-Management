@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BookManagement
 {
-    public partial class Form2 : Form
+    public partial class FindID : Form
     {
-        public Form2()
+        public FindID()
         {
             InitializeComponent();
         }
