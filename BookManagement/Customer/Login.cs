@@ -25,6 +25,7 @@ namespace BookManagement
             if(textID.Text == "123" && textPwd.Text == "123")
             {
                 successLogin = true;
+                Book.BookLoad(); // 도서들 파일에서 불러오기
                 Close();
             }
             else

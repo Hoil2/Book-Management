@@ -46,22 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="Book\AddBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Book\AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\BookInfo.cs" />
+    <Compile Include="Customer\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindID.cs">
+    <Compile Include="Customer\FindID.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindID.Designer.cs">
+    <Compile Include="Customer\FindID.Designer.cs">
       <DependentUpon>FindID.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindPW.cs">
+    <Compile Include="Customer\FindPW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindPW.Designer.cs">
+    <Compile Include="Customer\FindPW.Designer.cs">
       <DependentUpon>FindPW.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
@@ -70,27 +77,30 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.cs">
+    <Compile Include="Customer\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
+    <Compile Include="Customer\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Book\AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindID.resx">
+    <EmbeddedResource Include="Customer\FindID.resx">
       <DependentUpon>FindID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindPW.resx">
+    <EmbeddedResource Include="Customer\FindPW.resx">
       <DependentUpon>FindPW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
+    <EmbeddedResource Include="Customer\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,5 +125,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

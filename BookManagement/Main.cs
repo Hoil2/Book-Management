@@ -13,16 +13,18 @@ namespace BookManagement
     public partial class Main : Form
     {
         frmLogin _frmLogin;
+
         public Main()
         {
             InitializeComponent();
             _frmLogin = new frmLogin();
             _frmLogin.FormClosed += new FormClosedEventHandler(LoginFail);
+            Book.database = new List<BookInfo>(); // 도서 파일 초기화
         }
 
         void LoginFail(object sender, FormClosedEventArgs e)
         {
-            if (_frmLogin.close)
+            if (!_frmLogin.successLogin && _frmLogin.close)
                 Close();
         }
 
@@ -33,6 +35,11 @@ namespace BookManagement
             {
                 _frmLogin.ShowDialog();
             }
+        }
+
+        private void menuAddBook_Click(object sender, EventArgs e)
+        {
+            new AddBook().ShowDialog();
         }
     }
 }
