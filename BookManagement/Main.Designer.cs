@@ -41,7 +41,6 @@
             this.menuSearchBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuModifyBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddBook = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuRemoveBook = new System.Windows.Forms.ToolStripMenuItem();
             this.연체ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.연체도서검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.연체이용자검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +65,7 @@
             this.이용통계ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(561, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,19 +83,19 @@
             // 회원검색ToolStripMenuItem
             // 
             this.회원검색ToolStripMenuItem.Name = "회원검색ToolStripMenuItem";
-            this.회원검색ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.회원검색ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.회원검색ToolStripMenuItem.Text = "회원검색";
             // 
             // 회원수정ToolStripMenuItem
             // 
             this.회원수정ToolStripMenuItem.Name = "회원수정ToolStripMenuItem";
-            this.회원수정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.회원수정ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.회원수정ToolStripMenuItem.Text = "회원수정";
             // 
             // 회원삭제ToolStripMenuItem
             // 
             this.회원삭제ToolStripMenuItem.Name = "회원삭제ToolStripMenuItem";
-            this.회원삭제ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.회원삭제ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.회원삭제ToolStripMenuItem.Text = "회원삭제";
             // 
             // 대출반납ToolStripMenuItem
@@ -113,19 +112,19 @@
             // 도서대출ToolStripMenuItem
             // 
             this.도서대출ToolStripMenuItem.Name = "도서대출ToolStripMenuItem";
-            this.도서대출ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.도서대출ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.도서대출ToolStripMenuItem.Text = "도서대출";
             // 
             // 대출연장ToolStripMenuItem
             // 
             this.대출연장ToolStripMenuItem.Name = "대출연장ToolStripMenuItem";
-            this.대출연장ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.대출연장ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.대출연장ToolStripMenuItem.Text = "대출연장";
             // 
             // 도서반납ToolStripMenuItem
             // 
             this.도서반납ToolStripMenuItem.Name = "도서반납ToolStripMenuItem";
-            this.도서반납ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.도서반납ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.도서반납ToolStripMenuItem.Text = "도서반납";
             // 
             // 도서ToolStripMenuItem
@@ -134,10 +133,9 @@
             this.도서ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuSearchBook,
             this.menuModifyBook,
-            this.menuAddBook,
-            this.menuRemoveBook});
+            this.menuAddBook});
             this.도서ToolStripMenuItem.Name = "도서ToolStripMenuItem";
-            this.도서ToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
+            this.도서ToolStripMenuItem.Size = new System.Drawing.Size(122, 25);
             this.도서ToolStripMenuItem.Text = "도서";
             // 
             // menuSearchBook
@@ -145,12 +143,14 @@
             this.menuSearchBook.Name = "menuSearchBook";
             this.menuSearchBook.Size = new System.Drawing.Size(180, 22);
             this.menuSearchBook.Text = "도서검색";
+            this.menuSearchBook.Click += new System.EventHandler(this.menuSearchBook_Click);
             // 
             // menuModifyBook
             // 
             this.menuModifyBook.Name = "menuModifyBook";
             this.menuModifyBook.Size = new System.Drawing.Size(180, 22);
             this.menuModifyBook.Text = "도서수정";
+            this.menuModifyBook.Click += new System.EventHandler(this.menuModifyBook_Click);
             // 
             // menuAddBook
             // 
@@ -158,12 +158,6 @@
             this.menuAddBook.Size = new System.Drawing.Size(180, 22);
             this.menuAddBook.Text = "도서추가";
             this.menuAddBook.Click += new System.EventHandler(this.menuAddBook_Click);
-            // 
-            // menuRemoveBook
-            // 
-            this.menuRemoveBook.Name = "menuRemoveBook";
-            this.menuRemoveBook.Size = new System.Drawing.Size(180, 22);
-            this.menuRemoveBook.Text = "도서삭제";
             // 
             // 연체ToolStripMenuItem
             // 
@@ -200,13 +194,13 @@
             // 도서ToolStripMenuItem1
             // 
             this.도서ToolStripMenuItem1.Name = "도서ToolStripMenuItem1";
-            this.도서ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.도서ToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.도서ToolStripMenuItem1.Text = "도서대출통계";
             // 
             // 이용자통계ToolStripMenuItem
             // 
             this.이용자통계ToolStripMenuItem.Name = "이용자통계ToolStripMenuItem";
-            this.이용자통계ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.이용자통계ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.이용자통계ToolStripMenuItem.Text = "이용자통계";
             // 
             // 이용통계ToolStripMenuItem
@@ -223,27 +217,30 @@
             // 도서문의ToolStripMenuItem
             // 
             this.도서문의ToolStripMenuItem.Name = "도서문의ToolStripMenuItem";
-            this.도서문의ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.도서문의ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.도서문의ToolStripMenuItem.Text = "도서문의";
             // 
             // 회원문의ToolStripMenuItem
             // 
             this.회원문의ToolStripMenuItem.Name = "회원문의ToolStripMenuItem";
-            this.회원문의ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.회원문의ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.회원문의ToolStripMenuItem.Text = "회원문의";
             // 
             // 자주하는질문ToolStripMenuItem
             // 
             this.자주하는질문ToolStripMenuItem.Name = "자주하는질문ToolStripMenuItem";
-            this.자주하는질문ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.자주하는질문ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.자주하는질문ToolStripMenuItem.Text = "자주하는 질문";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 376);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(564, 376);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Main";
@@ -273,7 +270,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuSearchBook;
         private System.Windows.Forms.ToolStripMenuItem menuModifyBook;
         private System.Windows.Forms.ToolStripMenuItem menuAddBook;
-        private System.Windows.Forms.ToolStripMenuItem menuRemoveBook;
         private System.Windows.Forms.ToolStripMenuItem 연체도서검색ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 연체이용자검색ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 도서ToolStripMenuItem1;

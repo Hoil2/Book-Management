@@ -66,25 +66,18 @@ namespace BookManagement
             if (!di.Exists) di.Create();
 
             string _bookNumber = CreateRegistrationNumber(); // 등록번호 부여
-            
-            using(FileStream fs = new FileStream(bookDatabasePath, FileMode.Create, FileAccess.Write))
+            BookInfo bookInfo = new BookInfo()
             {
-                BinaryFormatter binary = new BinaryFormatter();
-                BookInfo bookInfo = new BookInfo()
-                {
-                    bookNumber = _bookNumber,
-                    bookName = txtBookName.Text,
-                    author = txtAuthor.Text,
-                    publisher = txtPublisher.Text,
-                    publicationYear = lblPublicationYear.Text,
-                    bookStatus = cboxBookStatus.Text
-                };
-
-                Book.database.Add(bookInfo);
-                Book.database.Sort();
-
-                binary.Serialize(fs, Book.database); 
-            }
+                bookNumber = _bookNumber,
+                bookName = txtBookName.Text,
+                author = txtAuthor.Text,
+                publisher = txtPublisher.Text,
+                publicationYear = lblPublicationYear.Text,
+                bookStatus = cboxBookStatus.Text,
+                bookLoanPeriod = DateTime.Now.AddDays(14).ToString("yyyy-MM-dd")
+            };
+            Book.database.Add(bookInfo);
+            Book.BookSave();
             Close();
             MessageBox.Show("추가 성공");
         }

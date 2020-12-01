@@ -13,6 +13,8 @@ namespace BookManagement
     public partial class Main : Form
     {
         frmLogin _frmLogin;
+        frmSearchBook frmSearchBook = null;
+        frmModifyBook frmModifyBook = null;
 
         public Main()
         {
@@ -40,6 +42,36 @@ namespace BookManagement
         private void menuAddBook_Click(object sender, EventArgs e)
         {
             new AddBook().ShowDialog();
+        }
+
+        private void menuSearchBook_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if(ActiveMdiChild != frmSearchBook)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmSearchBook = new frmSearchBook();
+            frmSearchBook.MdiParent = this;
+            frmSearchBook.WindowState = FormWindowState.Maximized;
+            frmSearchBook.Show();
+        }
+
+        private void menuModifyBook_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmModifyBook)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmModifyBook = new frmModifyBook();
+            frmModifyBook.MdiParent = this;
+            frmModifyBook.WindowState = FormWindowState.Maximized;
+            frmModifyBook.Show();
         }
     }
 }

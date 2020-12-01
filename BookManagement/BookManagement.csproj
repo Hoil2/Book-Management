@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book\BookModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\BookModifyForm.Designer.cs">
+      <DependentUpon>BookModifyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Book\AddBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +59,18 @@
       <DependentUpon>AddBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Book\BookInfo.cs" />
+    <Compile Include="Book\BookInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\BookInfoForm.Designer.cs">
+      <DependentUpon>BookInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\SearchBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\SearchBook.Designer.cs">
+      <DependentUpon>SearchBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,10 +101,25 @@
     <Compile Include="Customer\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Book\ModifyBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\ModifyBook.Designer.cs">
+      <DependentUpon>ModifyBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Book\BookModifyForm.resx">
+      <DependentUpon>BookModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Book\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\BookInfoForm.resx">
+      <DependentUpon>BookInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\SearchBook.resx">
+      <DependentUpon>SearchBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -102,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\ModifyBook.resx">
+      <DependentUpon>ModifyBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
