@@ -23,18 +23,25 @@ namespace BookManagement
 
         private void button1_Click(object sender, EventArgs e) //로그인버튼 클릭시
         {
-            if(textID.Text == User.userdatabase[0].userID && textPwd.Text == User.userdatabase[0].userPwd)
+            if (User.ExistsID(textID.Text))
             {
-                successLogin = true;
-                Book.BookLoad(); // 도서들 파일에서 불러오기
-                User.UserLoad();
-                MessageBox.Show(User.userdatabase[0].userID);
-                Close();
+                if (User.ComparePW(textID.Text, textPwd.Text))
+                {
+                    successLogin = true;
+                    Book.BookLoad(); // 도서들 파일에서 불러오기
+                    MessageBox.Show("로그인 성공", "로그인 성공");
+                    Close();
+                }
+                else // 비밀번호 틀렸을 때
+                {
+                    successLogin = false;
+                    MessageBox.Show("비밀번호 틀림", "로그인 실패");
+                }
             }
-            else
+            else  // 아이디 틀렸을 때
             {
                 successLogin = false;
-                MessageBox.Show("올바른 아이디 또는 패스워드를 입력하세요", "로그인 실패");
+                MessageBox.Show("아이디 틀림", "로그인 실패");
             }
         }
 

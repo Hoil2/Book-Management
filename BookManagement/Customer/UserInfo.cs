@@ -50,5 +50,51 @@ namespace BookManagement.Customer
                 binary.Serialize(fs, userdatabase);
             }
         }
+
+        public static bool ExistsID(string id)
+        {
+            for (int i = 0; i < userdatabase.Count; i++)
+            {
+                if (userdatabase[i].userID.Equals(id))
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool ComparePW(string id, string pw)
+        {
+            for (int i = 0; i < userdatabase.Count; i++)
+            {
+                if (userdatabase[i].userID.Equals(id))
+                {
+                    if (userdatabase[i].userPwd.Equals(pw))
+                        return true;
+                    else return false;
+                }
+            }
+            return false;
+        }
+
+        public static bool CompareFindPW(string id, string ph1, string ph2, string ph3)
+        {
+            for (int i = 0; i < userdatabase.Count; i++)
+            {
+                if (userdatabase[i].userID.Equals(id))
+                {
+                    if (userdatabase[i].userPwd.Equals(ph1))
+                    {
+                        if (userdatabase[i].userPwd.Equals(ph2))
+                        {
+                            if (userdatabase[i].userPwd.Equals(ph3))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    else return false;
+                }
+            }
+            return false;
+        }
     }
 }

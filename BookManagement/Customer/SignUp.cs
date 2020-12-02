@@ -29,10 +29,10 @@ namespace BookManagement
                 if (textID.Text.Equals(User.userdatabase[i].userID))
                 {
                     flag = false;
+                    break;
                 }
                 else
                 {
-                    
                     flag = true;
                 }
                 i++;
@@ -63,6 +63,11 @@ namespace BookManagement
             else if(int.TryParse(textBirth.Text, out number) == false)
             {
                 MessageBox.Show("연/월/일 순으로 숫자만 입력해 주십시오", "생년월일 기입 오류");
+                return;
+            }
+            else if(User.ExistsID(textID.Text))
+            {
+                MessageBox.Show("다른 아이디를 사용해 주십시오");
                 return;
             }
             DirectoryInfo di = new DirectoryInfo(@"Customer");
@@ -98,17 +103,20 @@ namespace BookManagement
             }
             
             CheckID();
-            
+
+            bool flag = true;
+
             if(CheckID() == true)
             {
                 MessageBox.Show("사용 가능한 아이디입니다", "아이디 확인");
+                flag = true;
             }
             else
             {
                 MessageBox.Show("이미 사용중인 아이디입니다", "아이디 중복");
+                flag = false;
             }
-            
-            
+           
             User.UserLoad();
         }
     }
