@@ -79,5 +79,22 @@ namespace BookManagement
         {
             User.UserLoad();
         }
+
+        private void 회원검색ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchUser searchUser = new SearchUser();
+            searchUser.ShowDialog();
+        }
+
+        private void 회원수정ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 회원삭제ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DelectUser delectUser = new DelectUser();
+            delectUser.ShowDialog();
+        }
     }
 }

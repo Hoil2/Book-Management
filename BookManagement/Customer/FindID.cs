@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookManagement.Customer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,41 +31,15 @@ namespace BookManagement
 
         private void btnInput_Click(object sender, EventArgs e)
         {
-            using (StreamReader reader = new StreamReader(@"D:\test\CusFindId.txt"))
+            string id = User.FindID(textName.Text, textPhone1.Text, textPhone2.Text, textPhone3.Text);
+            if (id != "")
             {
-                string findId;
-
-                while ((findId = reader.ReadLine()) != null)
-                {
-                    if (textName.Text == findId)
-                    {
-                        findId = reader.ReadLine();
-                        if (textPhone1.Text + " - " + textPhone2.Text + " - " + textPhone3.Text == findId)
-                        {
-                            MessageBox.Show("아이디는 " + "앙기모리" + "입니다", "아이디 찾기");
-                        }
-                        else
-                        {
-                            MessageBox.Show("해당 정보와 일치하는 아이디가 없습니다", "아이디 찾기 실패");
-                        }
-                    }
-                    else
-                    {
-                        try
-                        {
-                            MessageBox.Show("해당 정보와 일치하는 아이디가 없습니다", "아이디 찾기 실패");
-                            reader.Close();
-
-                        }
-                        catch (IOException)
-                        {
-
-                        }
-                    }
-                }
+                MessageBox.Show("아이디는 " + id + "입니다", "아이디 찾기 성공");
             }
-
-            //textName.Text != null && textPhone1.Text != null && textPhone2.Text != null && textPhone3.Text != null
+            else
+            {
+                MessageBox.Show("아이디를 찾는데 실패하였습니다", "아이디 찾기 실패");
+            }
         }
 
         private void btnCancle_Click(object sender, EventArgs e)

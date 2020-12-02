@@ -83,20 +83,23 @@
             // 회원검색ToolStripMenuItem
             // 
             this.회원검색ToolStripMenuItem.Name = "회원검색ToolStripMenuItem";
-            this.회원검색ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.회원검색ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.회원검색ToolStripMenuItem.Text = "회원검색";
+            this.회원검색ToolStripMenuItem.Click += new System.EventHandler(this.회원검색ToolStripMenuItem_Click);
             // 
             // 회원수정ToolStripMenuItem
             // 
             this.회원수정ToolStripMenuItem.Name = "회원수정ToolStripMenuItem";
-            this.회원수정ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.회원수정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.회원수정ToolStripMenuItem.Text = "회원수정";
+            this.회원수정ToolStripMenuItem.Click += new System.EventHandler(this.회원수정ToolStripMenuItem_Click);
             // 
             // 회원삭제ToolStripMenuItem
             // 
             this.회원삭제ToolStripMenuItem.Name = "회원삭제ToolStripMenuItem";
-            this.회원삭제ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.회원삭제ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.회원삭제ToolStripMenuItem.Text = "회원삭제";
+            this.회원삭제ToolStripMenuItem.Click += new System.EventHandler(this.회원삭제ToolStripMenuItem_Click);
             // 
             // 대출반납ToolStripMenuItem
             // 

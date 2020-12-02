@@ -75,26 +75,55 @@ namespace BookManagement.Customer
             return false;
         }
 
-        public static bool CompareFindPW(string id, string ph1, string ph2, string ph3)
+        public static string FindID(string name, string ph1, string ph2, string ph3)
+        {
+            for (int i = 0; i < userdatabase.Count; i++)
+            {
+                if (userdatabase[i].userName.Equals(name))
+                {
+                    if (userdatabase[i].userPhone1.Equals(ph1) &&
+                        userdatabase[i].userPhone2.Equals(ph2) &&
+                        userdatabase[i].userPhone3.Equals(ph3))
+                    {
+                        return userdatabase[i].userID;
+                    }
+                    return "";
+                }
+            }
+            return "";
+        }
+
+        public static string FindPW(string id, string phone1, string phone2, string phone3)
         {
             for (int i = 0; i < userdatabase.Count; i++)
             {
                 if (userdatabase[i].userID.Equals(id))
                 {
-                    if (userdatabase[i].userPwd.Equals(ph1))
+                    if (userdatabase[i].userPhone1.Equals(phone1) &&
+                        userdatabase[i].userPhone2.Equals(phone2) &&
+                        userdatabase[i].userPhone3.Equals(phone3))
                     {
-                        if (userdatabase[i].userPwd.Equals(ph2))
-                        {
-                            if (userdatabase[i].userPwd.Equals(ph3))
-                            {
-                                return true;
-                            }
-                        }
+                        return userdatabase[i].userPwd;
                     }
-                    else return false;
+                    return ""; // 아이디는 찾았는데 전화번호가 일치하지 않을 때
                 }
             }
-            return false;
+            return ""; // 아이디도 못찾았을 때
+        }
+        public static string FindAllID(string id)
+        {
+            for (int i = 0; i < userdatabase.Count; i++)
+            {
+                if (userdatabase[i].userName.Equals(id))
+                {
+                    return userdatabase[i].userID;
+                }
+                else
+                {
+                    return "못참음";
+                }
+            }
+            return "";
         }
     }
 }
