@@ -16,6 +16,7 @@ namespace BookManagement
         frmLogin _frmLogin;
         frmSearchBook frmSearchBook = null;
         frmModifyBook frmModifyBook = null;
+        frmCheckBook frmCheckbook = null;
 
         public Main()
         {
@@ -78,6 +79,31 @@ namespace BookManagement
         private void Main_Load(object sender, EventArgs e)
         {
             User.UserLoad();
+        }
+
+        private void 도서대출ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmCheckbook)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmCheckbook = new frmCheckBook();
+            frmCheckbook.MdiParent = this;
+            frmCheckbook.WindowState = FormWindowState.Maximized;
+            frmCheckbook.Show();
+        }
+
+        private void 대출연장ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void 도서반납ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

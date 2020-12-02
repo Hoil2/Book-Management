@@ -71,6 +71,24 @@
     <Compile Include="Book\SearchBook.Designer.cs">
       <DependentUpon>SearchBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Checkout\CheckBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckBook.Designer.cs">
+      <DependentUpon>CheckBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\ExtendBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout\ExtendBook.Designer.cs">
+      <DependentUpon>ExtendBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\ReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout\ReturnBook.Designer.cs">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +139,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Book\SearchBook.resx">
       <DependentUpon>SearchBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout\CheckBook.resx">
+      <DependentUpon>CheckBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout\ExtendBook.resx">
+      <DependentUpon>ExtendBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout\ReturnBook.resx">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
