@@ -14,18 +14,26 @@ namespace BookManagement
 {
     public partial class FindPW : Form
     {
-        public bool CheckPwd()
+        public bool FindPw()
         {
             int i = 0;
             bool flag = true;
 
             while (i < User.userdatabase.Count)
             {
-                if (textID.Text == User.userdatabase[i].userID && 
-                    textPhone1.Text == User.userdatabase[i].userPhone1 && textPhone2.Text == User.userdatabase[i].userPhone2 && textPhone2.Text == User.userdatabase[i].userPhone3)
+                if (textID.Text.Equals(User.userdatabase[i].userID))
                 {
-                    flag = true;
-                    break;
+                    if(textPhone1.Text.Equals(User.userdatabase[i].userPhone1))
+                    {
+                        if (textPhone2.Text.Equals(User.userdatabase[i].userPhone2))
+                        {
+                            if (textPhone3.Text.Equals(User.userdatabase[i].userPhone3))
+                            {
+                                flag = true;
+                            }
+                        }
+                    }
+                    
                 }
                 else
                 {
@@ -43,16 +51,47 @@ namespace BookManagement
 
         private void btnInput_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            while(i < User.userdatabase.Count)
-            {
-                if (User.CompareFindPW(textID.Text, textPhone1.Text, textPhone2.Text, textPhone3.Text))
+            int number;
+
+            /*while(i < User.userdatabase.Count)
+            {*/
+                if(textID.Text == "" || textPhone1.Text == "" || textPhone2.Text == "" || textPhone3.Text == "")
                 {
-                    MessageBox.Show(User.userdatabase[i].userPwd, "");
+                    MessageBox.Show("아이디, 전화번호를 모두 입력해 주십시오", "비밀번호 찾기 실패");
+                    return;
                 }
-                i++;
+                else if (int.TryParse(textPhone1.Text, out number) == false || int.TryParse(textPhone2.Text, out number) == false || int.TryParse(textPhone3.Text, out number) == false)
+                {
+                    MessageBox.Show("전화번호는 숫자만 입력해 주십시오", "전화번호 기입 오류");
+                    return;
+                }
+                else if(textPhone1.TextLength != 3 || textPhone2.TextLength != 4 || textPhone3.TextLength != 4)
+                {
+                    MessageBox.Show("올바른 전화번호를 입력해 주십시오", "전화번호 기입 오류");
+                }
+
+            /*if(FindPw() == true)
+            {
+                MessageBox.Show(User.userdatabase[i].userPwd, "비밀번호 찾기 성공");
+                break;
             }
-            
+            else
+            {
+                MessageBox.Show("올바른 정보를 입력해 주십시오", "비밀번호 찾기 실패");
+            }
+            i++;*/
+
+            string pw = User.FindPW(textID.Text, textPhone1.Text, textPhone2.Text, textPhone3.Text);
+            if (pw != "")
+            {
+                MessageBox.Show("비밀번호는 " + pw + "입니다", "비밀번호 찾기 성공");
+            }
+            else
+            {
+                MessageBox.Show("비밀번호를 찾는데 실패하였습니다", "비밀번호 찾기 실패");
+            }
+            /*}*/
+
             /*int i = 0;
 
             while(i < User.userdatabase.Count)
@@ -67,7 +106,7 @@ namespace BookManagement
                 }
                 i++;
             }*/
-            
+
         }
 
         private void btnCancle_Click(object sender, EventArgs e)

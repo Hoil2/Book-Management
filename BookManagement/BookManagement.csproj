@@ -71,6 +71,18 @@
     <Compile Include="Book\SearchBook.Designer.cs">
       <DependentUpon>SearchBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\DelectUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\DelectUser.Designer.cs">
+      <DependentUpon>DelectUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\DelectUserInputPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\DelectUserInputPW.Designer.cs">
+      <DependentUpon>DelectUserInputPW.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     </Compile>
     <Compile Include="Customer\FindPW.Designer.cs">
       <DependentUpon>FindPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\SearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\SearchUser.Designer.cs">
+      <DependentUpon>SearchUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer\UserInfo.cs" />
     <Compile Include="Main.cs">
@@ -122,6 +140,12 @@
     <EmbeddedResource Include="Book\SearchBook.resx">
       <DependentUpon>SearchBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\DelectUser.resx">
+      <DependentUpon>DelectUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\DelectUserInputPW.resx">
+      <DependentUpon>DelectUserInputPW.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\FindPW.resx">
       <DependentUpon>FindPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\SearchUser.resx">
+      <DependentUpon>SearchUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

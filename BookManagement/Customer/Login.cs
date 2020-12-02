@@ -29,7 +29,6 @@ namespace BookManagement
                 {
                     successLogin = true;
                     Book.BookLoad(); // 도서들 파일에서 불러오기
-                    MessageBox.Show("로그인 성공", "로그인 성공");
                     Close();
                 }
                 else // 비밀번호 틀렸을 때
