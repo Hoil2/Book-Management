@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookManagement.Customer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,10 +23,12 @@ namespace BookManagement
 
         private void button1_Click(object sender, EventArgs e) //로그인버튼 클릭시
         {
-            if(textID.Text == "123" && textPwd.Text == "123")
+            if(textID.Text == User.userdatabase[0].userID && textPwd.Text == User.userdatabase[0].userPwd)
             {
                 successLogin = true;
                 Book.BookLoad(); // 도서들 파일에서 불러오기
+                User.UserLoad();
+                MessageBox.Show(User.userdatabase[0].userID);
                 Close();
             }
             else

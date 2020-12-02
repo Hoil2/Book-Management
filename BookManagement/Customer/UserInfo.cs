@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace BookManagement.Customer
+{
+    [Serializable]
+    public class UserInfo : IComparable
+    {
+        public string userID;
+        public string userName;
+        public string userBirth;
+        public string userPhone1, userPhone2, userPhone3;
+        public string userPwd;
+
+        public int CompareTo(object obj)
+        {
+            return userID.CompareTo((obj as UserInfo).userID);
+        }
+    }
+
+    public class User
+    {
+        public static List<UserInfo> userdatabase = new List<UserInfo>();
+        public static string userDatabasePath = @"Customer\UserDB.txt";
+        public static void UserLoad()
+        {
+            FileInfo fileInfo = new FileInfo(userDatabasePath);
+            if (fileInfo.Exists)
+            {
+                using (FileStream fs = new FileStream(userDatabasePath, FileMode.Open))
+                {
+                    BinaryFormatter binary = new BinaryFormatter();
+                    userdatabase = (List<UserInfo>)binary.Deserialize(fs);
+                }
+            }
+        }
+
+        public static void UserSave()
+        {
+            using (FileStream fs = new FileStream(userDatabasePath, FileMode.Create, FileAccess.Write))
+            {
+                BinaryFormatter binary = new BinaryFormatter();
+                userdatabase.Sort();
+                binary.Serialize(fs, userdatabase);
+            }
+        }
+    }
+}
