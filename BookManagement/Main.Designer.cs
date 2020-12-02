@@ -65,7 +65,7 @@
             this.이용통계ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(564, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(554, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -135,7 +135,7 @@
             this.menuModifyBook,
             this.menuAddBook});
             this.도서ToolStripMenuItem.Name = "도서ToolStripMenuItem";
-            this.도서ToolStripMenuItem.Size = new System.Drawing.Size(122, 25);
+            this.도서ToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
             this.도서ToolStripMenuItem.Text = "도서";
             // 
             // menuSearchBook
@@ -172,13 +172,13 @@
             // 연체도서검색ToolStripMenuItem
             // 
             this.연체도서검색ToolStripMenuItem.Name = "연체도서검색ToolStripMenuItem";
-            this.연체도서검색ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.연체도서검색ToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.연체도서검색ToolStripMenuItem.Text = "연체도서검색";
             // 
             // 연체이용자검색ToolStripMenuItem
             // 
             this.연체이용자검색ToolStripMenuItem.Name = "연체이용자검색ToolStripMenuItem";
-            this.연체이용자검색ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.연체이용자검색ToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.연체이용자검색ToolStripMenuItem.Text = "연체이용자검색";
             // 
             // 문의ToolStripMenuItem
@@ -238,7 +238,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(564, 376);
+            this.ClientSize = new System.Drawing.Size(554, 376);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
