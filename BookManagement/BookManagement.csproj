@@ -89,6 +89,7 @@
     <Compile Include="Customer\FindPW.Designer.cs">
       <DependentUpon>FindPW.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\UserInfo.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

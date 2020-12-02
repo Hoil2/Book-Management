@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookManagement.Customer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,6 +73,11 @@ namespace BookManagement
             frmModifyBook.MdiParent = this;
             frmModifyBook.WindowState = FormWindowState.Maximized;
             frmModifyBook.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            User.UserLoad();
         }
     }
 }

@@ -43,9 +43,10 @@
             this.textPhone1 = new System.Windows.Forms.TextBox();
             this.btnCancle = new System.Windows.Forms.Button();
             this.btnInput = new System.Windows.Forms.Button();
-            this.textAdress = new System.Windows.Forms.TextBox();
+            this.textPwd = new System.Windows.Forms.TextBox();
             this.btnCheck = new System.Windows.Forms.Button();
             this.groupBoxNew = new System.Windows.Forms.GroupBox();
+            this.groupBoxNew.SuspendLayout();
             this.SuspendLayout();
             // 
             // textID
@@ -121,11 +122,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(55, 175);
+            this.label5.Location = new System.Drawing.Point(31, 163);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
+            this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 9;
-            this.label5.Text = "주소";
+            this.label5.Text = "비밀번호";
             // 
             // label6
             // 
@@ -196,14 +197,15 @@
             this.btnInput.UseVisualStyleBackColor = true;
             this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
-            // textAdress
+            // textPwd
             // 
-            this.textAdress.Location = new System.Drawing.Point(131, 170);
-            this.textAdress.MaxLength = 60;
-            this.textAdress.Multiline = true;
-            this.textAdress.Name = "textAdress";
-            this.textAdress.Size = new System.Drawing.Size(197, 33);
-            this.textAdress.TabIndex = 25;
+            this.textPwd.Location = new System.Drawing.Point(107, 158);
+            this.textPwd.MaxLength = 12;
+            this.textPwd.Multiline = true;
+            this.textPwd.Name = "textPwd";
+            this.textPwd.PasswordChar = '●';
+            this.textPwd.Size = new System.Drawing.Size(100, 21);
+            this.textPwd.TabIndex = 25;
             // 
             // btnCheck
             // 
@@ -218,19 +220,20 @@
             // 
             // groupBoxNew
             // 
+            this.groupBoxNew.Controls.Add(this.textPwd);
+            this.groupBoxNew.Controls.Add(this.label5);
             this.groupBoxNew.Location = new System.Drawing.Point(24, 12);
             this.groupBoxNew.Name = "groupBoxNew";
             this.groupBoxNew.Size = new System.Drawing.Size(348, 247);
             this.groupBoxNew.TabIndex = 27;
             this.groupBoxNew.TabStop = false;
             // 
-            // Form4
+            // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.btnCheck);
-            this.Controls.Add(this.textAdress);
             this.Controls.Add(this.btnCancle);
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.label6);
@@ -238,7 +241,6 @@
             this.Controls.Add(this.textPhone3);
             this.Controls.Add(this.textPhone2);
             this.Controls.Add(this.textPhone1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -247,8 +249,10 @@
             this.Controls.Add(this.textName);
             this.Controls.Add(this.textID);
             this.Controls.Add(this.groupBoxNew);
-            this.Name = "Form4";
+            this.Name = "SignUp";
             this.Text = "회원가입";
+            this.groupBoxNew.ResumeLayout(false);
+            this.groupBoxNew.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +275,7 @@
         private System.Windows.Forms.TextBox textPhone1;
         private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.Button btnInput;
-        private System.Windows.Forms.TextBox textAdress;
+        private System.Windows.Forms.TextBox textPwd;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.GroupBox groupBoxNew;
     }

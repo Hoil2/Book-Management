@@ -141,21 +141,21 @@
             // menuSearchBook
             // 
             this.menuSearchBook.Name = "menuSearchBook";
-            this.menuSearchBook.Size = new System.Drawing.Size(180, 22);
+            this.menuSearchBook.Size = new System.Drawing.Size(122, 22);
             this.menuSearchBook.Text = "도서검색";
             this.menuSearchBook.Click += new System.EventHandler(this.menuSearchBook_Click);
             // 
             // menuModifyBook
             // 
             this.menuModifyBook.Name = "menuModifyBook";
-            this.menuModifyBook.Size = new System.Drawing.Size(180, 22);
+            this.menuModifyBook.Size = new System.Drawing.Size(122, 22);
             this.menuModifyBook.Text = "도서수정";
             this.menuModifyBook.Click += new System.EventHandler(this.menuModifyBook_Click);
             // 
             // menuAddBook
             // 
             this.menuAddBook.Name = "menuAddBook";
-            this.menuAddBook.Size = new System.Drawing.Size(180, 22);
+            this.menuAddBook.Size = new System.Drawing.Size(122, 22);
             this.menuAddBook.Text = "도서추가";
             this.menuAddBook.Click += new System.EventHandler(this.menuAddBook_Click);
             // 
@@ -245,6 +245,7 @@
             this.Name = "Main";
             this.Text = "Main";
             this.Activated += new System.EventHandler(this.Main_Activated);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
