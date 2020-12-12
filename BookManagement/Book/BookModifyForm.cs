@@ -33,6 +33,7 @@ namespace BookManagement
                     if (Book.database[i].bookNumber.Equals(bookNumber))
                     {
                         Book.database.RemoveAt(i);
+                        Book.BookSave();
                         MessageBox.Show("삭제 완료");
                         Close();
                         break;

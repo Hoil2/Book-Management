@@ -26,7 +26,7 @@ namespace BookManagement.Customer
             {
                 if(user.userPwd == textDelectPW.Text)
                 {
-                    User.userdatabase.Remove(user);
+                    User.database.Remove(user);
                     User.UserSave();
                     MessageBox.Show("회원 삭제에 성공하였습니다", "회원 삭제");
                     Close();

@@ -83,23 +83,29 @@
     <Compile Include="Customer\DelectUserInputPW.Designer.cs">
       <DependentUpon>DelectUserInputPW.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Login.cs">
+    <Compile Include="Account\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\Login.Designer.cs">
+    <Compile Include="Account\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\FindID.cs">
+    <Compile Include="Account\FindID.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\FindID.Designer.cs">
+    <Compile Include="Account\FindID.Designer.cs">
       <DependentUpon>FindID.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\FindPW.cs">
+    <Compile Include="Account\FindPW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\FindPW.Designer.cs">
+    <Compile Include="Account\FindPW.Designer.cs">
       <DependentUpon>FindPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ModifyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\ModifyUser.Designer.cs">
+      <DependentUpon>ModifyUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer\SearchUser.cs">
       <SubType>Form</SubType>
@@ -108,16 +114,28 @@
       <DependentUpon>SearchUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer\UserInfo.cs" />
+    <Compile Include="Customer\UserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\UserInfoForm.Designer.cs">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\UserModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\UserModifyForm.Designer.cs">
+      <DependentUpon>UserModifyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\SignUp.cs">
+    <Compile Include="Account\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\SignUp.Designer.cs">
+    <Compile Include="Account\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Book\ModifyBook.cs">
@@ -146,22 +164,31 @@
     <EmbeddedResource Include="Customer\DelectUserInputPW.resx">
       <DependentUpon>DelectUserInputPW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\Login.resx">
+    <EmbeddedResource Include="Account\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\FindID.resx">
+    <EmbeddedResource Include="Account\FindID.resx">
       <DependentUpon>FindID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\FindPW.resx">
+    <EmbeddedResource Include="Account\FindPW.resx">
       <DependentUpon>FindPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\ModifyUser.resx">
+      <DependentUpon>ModifyUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\SearchUser.resx">
       <DependentUpon>SearchUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\UserInfoForm.resx">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\UserModifyForm.resx">
+      <DependentUpon>UserModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\SignUp.resx">
+    <EmbeddedResource Include="Account\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Book\ModifyBook.resx">

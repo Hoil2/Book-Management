@@ -26,7 +26,7 @@ namespace BookManagement.Customer
 
     public class User
     {
-        public static List<UserInfo> userdatabase = new List<UserInfo>();
+        public static List<UserInfo> database = new List<UserInfo>();
         public static string userDatabasePath = @"Customer\UserDB.txt";
         public static void UserLoad()
         {
@@ -36,7 +36,7 @@ namespace BookManagement.Customer
                 using (FileStream fs = new FileStream(userDatabasePath, FileMode.Open))
                 {
                     BinaryFormatter binary = new BinaryFormatter();
-                    userdatabase = (List<UserInfo>)binary.Deserialize(fs);
+                    database = (List<UserInfo>)binary.Deserialize(fs);
                 }
             }
         }
@@ -46,16 +46,16 @@ namespace BookManagement.Customer
             using (FileStream fs = new FileStream(userDatabasePath, FileMode.Create, FileAccess.Write))
             {
                 BinaryFormatter binary = new BinaryFormatter();
-                userdatabase.Sort();
-                binary.Serialize(fs, userdatabase);
+                database.Sort();
+                binary.Serialize(fs, database);
             }
         }
 
         public static bool ExistsID(string id)
         {
-            for (int i = 0; i < userdatabase.Count; i++)
+            for (int i = 0; i < database.Count; i++)
             {
-                if (userdatabase[i].userID.Equals(id))
+                if (database[i].userID.Equals(id))
                     return true;
             }
             return false;
@@ -63,11 +63,11 @@ namespace BookManagement.Customer
 
         public static bool ComparePW(string id, string pw)
         {
-            for (int i = 0; i < userdatabase.Count; i++)
+            for (int i = 0; i < database.Count; i++)
             {
-                if (userdatabase[i].userID.Equals(id))
+                if (database[i].userID.Equals(id))
                 {
-                    if (userdatabase[i].userPwd.Equals(pw))
+                    if (database[i].userPwd.Equals(pw))
                         return true;
                     else return false;
                 }
@@ -77,15 +77,15 @@ namespace BookManagement.Customer
 
         public static string FindID(string name, string ph1, string ph2, string ph3)
         {
-            for (int i = 0; i < userdatabase.Count; i++)
+            for (int i = 0; i < database.Count; i++)
             {
-                if (userdatabase[i].userName.Equals(name))
+                if (database[i].userName.Equals(name))
                 {
-                    if (userdatabase[i].userPhone1.Equals(ph1) &&
-                        userdatabase[i].userPhone2.Equals(ph2) &&
-                        userdatabase[i].userPhone3.Equals(ph3))
+                    if (database[i].userPhone1.Equals(ph1) &&
+                        database[i].userPhone2.Equals(ph2) &&
+                        database[i].userPhone3.Equals(ph3))
                     {
-                        return userdatabase[i].userID;
+                        return database[i].userID;
                     }
                     return "";
                 }
@@ -95,15 +95,15 @@ namespace BookManagement.Customer
 
         public static string FindPW(string id, string phone1, string phone2, string phone3)
         {
-            for (int i = 0; i < userdatabase.Count; i++)
+            for (int i = 0; i < database.Count; i++)
             {
-                if (userdatabase[i].userID.Equals(id))
+                if (database[i].userID.Equals(id))
                 {
-                    if (userdatabase[i].userPhone1.Equals(phone1) &&
-                        userdatabase[i].userPhone2.Equals(phone2) &&
-                        userdatabase[i].userPhone3.Equals(phone3))
+                    if (database[i].userPhone1.Equals(phone1) &&
+                        database[i].userPhone2.Equals(phone2) &&
+                        database[i].userPhone3.Equals(phone3))
                     {
-                        return userdatabase[i].userPwd;
+                        return database[i].userPwd;
                     }
                     return ""; // 아이디는 찾았는데 전화번호가 일치하지 않을 때
                 }
@@ -112,11 +112,11 @@ namespace BookManagement.Customer
         }
         public static string FindAllID(string id)
         {
-            for (int i = 0; i < userdatabase.Count; i++)
+            for (int i = 0; i < database.Count; i++)
             {
-                if (userdatabase[i].userName.Equals(id))
+                if (database[i].userName.Equals(id))
                 {
-                    return userdatabase[i].userID;
+                    return database[i].userID;
                 }
                 else
                 {

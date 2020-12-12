@@ -29,13 +29,13 @@ namespace BookManagement.Customer
 
         private void btnDelect_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < User.userdatabase.Count;i++)
+            for(int i = 0; i < User.database.Count;i++)
             {
-                if (textFindID.Text.Equals(User.userdatabase[i].userID))
+                if (textFindID.Text.Equals(User.database[i].userID))
                 {
                     textShowID.Text = textFindID.Text;
 
-                    DelectUserInputPW delectUserInputPW = new DelectUserInputPW(User.userdatabase[i]);
+                    DelectUserInputPW delectUserInputPW = new DelectUserInputPW(User.database[i]);
                     delectUserInputPW.ShowDialog();
                 }
             }

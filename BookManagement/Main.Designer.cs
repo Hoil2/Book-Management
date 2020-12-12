@@ -30,9 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.회원검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.회원수정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.회원삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSearchUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuModifyUser = new System.Windows.Forms.ToolStripMenuItem();
             this.대출반납ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.도서대출ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.대출연장ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +64,7 @@
             this.이용통계ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(554, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,33 +72,25 @@
             // 
             this.파일ToolStripMenuItem.AutoSize = false;
             this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.회원검색ToolStripMenuItem,
-            this.회원수정ToolStripMenuItem,
-            this.회원삭제ToolStripMenuItem});
+            this.menuSearchUser,
+            this.menuModifyUser});
             this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
             this.파일ToolStripMenuItem.Text = "회원";
             // 
-            // 회원검색ToolStripMenuItem
+            // menuSearchUser
             // 
-            this.회원검색ToolStripMenuItem.Name = "회원검색ToolStripMenuItem";
-            this.회원검색ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.회원검색ToolStripMenuItem.Text = "회원검색";
-            this.회원검색ToolStripMenuItem.Click += new System.EventHandler(this.회원검색ToolStripMenuItem_Click);
+            this.menuSearchUser.Name = "menuSearchUser";
+            this.menuSearchUser.Size = new System.Drawing.Size(180, 22);
+            this.menuSearchUser.Text = "회원검색";
+            this.menuSearchUser.Click += new System.EventHandler(this.menuSearchUser_Click);
             // 
-            // 회원수정ToolStripMenuItem
+            // menuModifyUser
             // 
-            this.회원수정ToolStripMenuItem.Name = "회원수정ToolStripMenuItem";
-            this.회원수정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.회원수정ToolStripMenuItem.Text = "회원수정";
-            this.회원수정ToolStripMenuItem.Click += new System.EventHandler(this.회원수정ToolStripMenuItem_Click);
-            // 
-            // 회원삭제ToolStripMenuItem
-            // 
-            this.회원삭제ToolStripMenuItem.Name = "회원삭제ToolStripMenuItem";
-            this.회원삭제ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.회원삭제ToolStripMenuItem.Text = "회원삭제";
-            this.회원삭제ToolStripMenuItem.Click += new System.EventHandler(this.회원삭제ToolStripMenuItem_Click);
+            this.menuModifyUser.Name = "menuModifyUser";
+            this.menuModifyUser.Size = new System.Drawing.Size(180, 22);
+            this.menuModifyUser.Text = "회원수정";
+            this.menuModifyUser.Click += new System.EventHandler(this.menuModifyUser_Click);
             // 
             // 대출반납ToolStripMenuItem
             // 
@@ -241,7 +232,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(554, 376);
+            this.ClientSize = new System.Drawing.Size(564, 376);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -265,9 +256,8 @@
         private System.Windows.Forms.ToolStripMenuItem 연체ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 문의ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 이용통계ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 회원검색ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 회원수정ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 회원삭제ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuSearchUser;
+        private System.Windows.Forms.ToolStripMenuItem menuModifyUser;
         private System.Windows.Forms.ToolStripMenuItem 도서대출ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 대출연장ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 도서반납ToolStripMenuItem;

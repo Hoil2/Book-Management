@@ -183,7 +183,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmBookModifyWindow";
-            this.Text = "BookModifyForm";
+            this.Text = "도서수정";
             this.ResumeLayout(false);
             this.PerformLayout();
 

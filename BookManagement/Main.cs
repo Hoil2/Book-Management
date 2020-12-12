@@ -17,6 +17,8 @@ namespace BookManagement
         frmSearchBook frmSearchBook = null;
         frmModifyBook frmModifyBook = null;
 
+        frmSearchUser frmSearchUser = null;
+        frmModifyUser frmModifyUser = null;
         public Main()
         {
             InitializeComponent();
@@ -80,21 +82,34 @@ namespace BookManagement
             User.UserLoad();
         }
 
-        private void 회원검색ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuSearchUser_Click(object sender, EventArgs e)
         {
-            SearchUser searchUser = new SearchUser();
-            searchUser.ShowDialog();
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmSearchUser)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmSearchUser = new frmSearchUser();
+            frmSearchUser.MdiParent = this;
+            frmSearchUser.WindowState = FormWindowState.Maximized;
+            frmSearchUser.Show();
         }
 
-        private void 회원수정ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuModifyUser_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void 회원삭제ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DelectUser delectUser = new DelectUser();
-            delectUser.ShowDialog();
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmModifyUser)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmModifyUser = new frmModifyUser();
+            frmModifyUser.MdiParent = this;
+            frmModifyUser.WindowState = FormWindowState.Maximized;
+            frmModifyUser.Show();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using BookManagement.Customer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BookManagement.Customer
 {
-    public partial class frmSearchUser : Form
+    public partial class frmModifyUser : Form
     {
-        public frmSearchUser()
+        public frmModifyUser()
         {
             InitializeComponent();
         }
@@ -46,12 +45,12 @@ namespace BookManagement.Customer
         void AddMemberInfoButton(UserInfo userInfo, int row)
         {
             Button button = new Button();
-            button.Text = "회원정보";
+            button.Text = "회원수정";
             button.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
             button.Click += new EventHandler(delegate
             {
-                frmUserInfoWindow frmUserInfo = new frmUserInfoWindow(userInfo);
-                frmUserInfo.ShowDialog();
+                frmUserModifyWindow frmUserModify = new frmUserModifyWindow(userInfo);
+                frmUserModify.ShowDialog();
             });
             tlpMemberList.Controls.Add(button, 1, row);
         }

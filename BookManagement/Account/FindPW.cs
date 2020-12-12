@@ -19,15 +19,15 @@ namespace BookManagement
             int i = 0;
             bool flag = true;
 
-            while (i < User.userdatabase.Count)
+            while (i < User.database.Count)
             {
-                if (textID.Text.Equals(User.userdatabase[i].userID))
+                if (textID.Text.Equals(User.database[i].userID))
                 {
-                    if(textPhone1.Text.Equals(User.userdatabase[i].userPhone1))
+                    if(textPhone1.Text.Equals(User.database[i].userPhone1))
                     {
-                        if (textPhone2.Text.Equals(User.userdatabase[i].userPhone2))
+                        if (textPhone2.Text.Equals(User.database[i].userPhone2))
                         {
-                            if (textPhone3.Text.Equals(User.userdatabase[i].userPhone3))
+                            if (textPhone3.Text.Equals(User.database[i].userPhone3))
                             {
                                 flag = true;
                             }

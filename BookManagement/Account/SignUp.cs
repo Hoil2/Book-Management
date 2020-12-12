@@ -24,9 +24,9 @@ namespace BookManagement
             int i = 0;
             bool flag = true;
 
-            while (i < User.userdatabase.Count)
+            while (i < User.database.Count)
             {
-                if (textID.Text.Equals(User.userdatabase[i].userID))
+                if (textID.Text.Equals(User.database[i].userID))
                 {
                     flag = false;
                     break;
@@ -83,7 +83,7 @@ namespace BookManagement
                 userPhone3 = textPhone3.Text,
                 userPwd = textPwd.Text
             };
-            User.userdatabase.Add(userInfo);
+            User.database.Add(userInfo);
             User.UserSave();
             Close();
             MessageBox.Show("회원가입에 성공하셨습니다", "회원가입");
