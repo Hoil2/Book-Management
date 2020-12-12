@@ -30,13 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.회원검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.회원수정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.회원삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSearchUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuModifyUser = new System.Windows.Forms.ToolStripMenuItem();
             this.대출반납ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.도서대출ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.대출연장ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.도서반납ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLoanBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLoanExtension = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuReturnBook = new System.Windows.Forms.ToolStripMenuItem();
             this.도서ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSearchBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuModifyBook = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,9 +47,9 @@
             this.도서ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.이용자통계ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.이용통계ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.도서문의ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.회원문의ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.자주하는질문ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBookQ = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMemberQ = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQandA = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +66,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(645, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(645, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,62 +74,57 @@
             // 
             this.파일ToolStripMenuItem.AutoSize = false;
             this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.회원검색ToolStripMenuItem,
-            this.회원수정ToolStripMenuItem,
-            this.회원삭제ToolStripMenuItem});
+            this.menuSearchUser,
+            this.menuModifyUser});
             this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
             this.파일ToolStripMenuItem.Text = "회원";
             // 
-            // 회원검색ToolStripMenuItem
+            // menuSearchUser
             // 
-            this.회원검색ToolStripMenuItem.Name = "회원검색ToolStripMenuItem";
-            this.회원검색ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.회원검색ToolStripMenuItem.Text = "회원검색";
+            this.menuSearchUser.Name = "menuSearchUser";
+            this.menuSearchUser.Size = new System.Drawing.Size(152, 26);
+            this.menuSearchUser.Text = "회원검색";
+            this.menuSearchUser.Click += new System.EventHandler(this.menuSearchUser_Click);
             // 
-            // 회원수정ToolStripMenuItem
+            // menuModifyUser
             // 
-            this.회원수정ToolStripMenuItem.Name = "회원수정ToolStripMenuItem";
-            this.회원수정ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.회원수정ToolStripMenuItem.Text = "회원수정";
-            // 
-            // 회원삭제ToolStripMenuItem
-            // 
-            this.회원삭제ToolStripMenuItem.Name = "회원삭제ToolStripMenuItem";
-            this.회원삭제ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.회원삭제ToolStripMenuItem.Text = "회원삭제";
+            this.menuModifyUser.Name = "menuModifyUser";
+            this.menuModifyUser.Size = new System.Drawing.Size(152, 26);
+            this.menuModifyUser.Text = "회원수정";
+            this.menuModifyUser.Click += new System.EventHandler(this.menuModifyUser_Click);
             // 
             // 대출반납ToolStripMenuItem
             // 
             this.대출반납ToolStripMenuItem.AutoSize = false;
             this.대출반납ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.도서대출ToolStripMenuItem,
-            this.대출연장ToolStripMenuItem,
-            this.도서반납ToolStripMenuItem});
+            this.menuLoanBook,
+            this.menuLoanExtension,
+            this.menuReturnBook});
             this.대출반납ToolStripMenuItem.Name = "대출반납ToolStripMenuItem";
             this.대출반납ToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
             this.대출반납ToolStripMenuItem.Text = "대출/반납";
             // 
-            // 도서대출ToolStripMenuItem
+            // menuLoanBook
             // 
-            this.도서대출ToolStripMenuItem.Name = "도서대출ToolStripMenuItem";
-            this.도서대출ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.도서대출ToolStripMenuItem.Text = "도서대출";
-            this.도서대출ToolStripMenuItem.Click += new System.EventHandler(this.도서대출ToolStripMenuItem_Click);
+            this.menuLoanBook.Name = "menuLoanBook";
+            this.menuLoanBook.Size = new System.Drawing.Size(224, 26);
+            this.menuLoanBook.Text = "도서대출";
+            this.menuLoanBook.Click += new System.EventHandler(this.menuLoanBook_Click);
             // 
-            // 대출연장ToolStripMenuItem
+            // menuLoanExtension
             // 
-            this.대출연장ToolStripMenuItem.Name = "대출연장ToolStripMenuItem";
-            this.대출연장ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.대출연장ToolStripMenuItem.Text = "대출연장";
-            this.대출연장ToolStripMenuItem.Click += new System.EventHandler(this.대출연장ToolStripMenuItem_Click);
+            this.menuLoanExtension.Name = "menuLoanExtension";
+            this.menuLoanExtension.Size = new System.Drawing.Size(224, 26);
+            this.menuLoanExtension.Text = "대출연장";
+            this.menuLoanExtension.Click += new System.EventHandler(this.menuLoanExtension_Click);
             // 
-            // 도서반납ToolStripMenuItem
+            // menuReturnBook
             // 
-            this.도서반납ToolStripMenuItem.Name = "도서반납ToolStripMenuItem";
-            this.도서반납ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.도서반납ToolStripMenuItem.Text = "도서반납";
-            this.도서반납ToolStripMenuItem.Click += new System.EventHandler(this.도서반납ToolStripMenuItem_Click);
+            this.menuReturnBook.Name = "menuReturnBook";
+            this.menuReturnBook.Size = new System.Drawing.Size(224, 26);
+            this.menuReturnBook.Text = "도서반납";
+            this.menuReturnBook.Click += new System.EventHandler(this.menuReturnBook_Click);
             // 
             // 도서ToolStripMenuItem
             // 
@@ -140,7 +134,7 @@
             this.menuModifyBook,
             this.menuAddBook});
             this.도서ToolStripMenuItem.Name = "도서ToolStripMenuItem";
-            this.도서ToolStripMenuItem.Size = new System.Drawing.Size(122, 25);
+            this.도서ToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
             this.도서ToolStripMenuItem.Text = "도서";
             // 
             // menuSearchBook
@@ -199,43 +193,46 @@
             // 도서ToolStripMenuItem1
             // 
             this.도서ToolStripMenuItem1.Name = "도서ToolStripMenuItem1";
-            this.도서ToolStripMenuItem1.Size = new System.Drawing.Size(182, 26);
+            this.도서ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.도서ToolStripMenuItem1.Text = "도서대출통계";
             // 
             // 이용자통계ToolStripMenuItem
             // 
             this.이용자통계ToolStripMenuItem.Name = "이용자통계ToolStripMenuItem";
-            this.이용자통계ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.이용자통계ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.이용자통계ToolStripMenuItem.Text = "이용자통계";
             // 
             // 이용통계ToolStripMenuItem
             // 
             this.이용통계ToolStripMenuItem.AutoSize = false;
             this.이용통계ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.도서문의ToolStripMenuItem,
-            this.회원문의ToolStripMenuItem,
-            this.자주하는질문ToolStripMenuItem});
+            this.menuBookQ,
+            this.menuMemberQ,
+            this.menuQandA});
             this.이용통계ToolStripMenuItem.Name = "이용통계ToolStripMenuItem";
             this.이용통계ToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
             this.이용통계ToolStripMenuItem.Text = "문의";
             // 
-            // 도서문의ToolStripMenuItem
+            // menuBookQ
             // 
-            this.도서문의ToolStripMenuItem.Name = "도서문의ToolStripMenuItem";
-            this.도서문의ToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.도서문의ToolStripMenuItem.Text = "도서문의";
+            this.menuBookQ.Name = "menuBookQ";
+            this.menuBookQ.Size = new System.Drawing.Size(224, 26);
+            this.menuBookQ.Text = "도서문의";
+            this.menuBookQ.Click += new System.EventHandler(this.menuBookQ_Click);
             // 
-            // 회원문의ToolStripMenuItem
+            // menuMemberQ
             // 
-            this.회원문의ToolStripMenuItem.Name = "회원문의ToolStripMenuItem";
-            this.회원문의ToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.회원문의ToolStripMenuItem.Text = "회원문의";
+            this.menuMemberQ.Name = "menuMemberQ";
+            this.menuMemberQ.Size = new System.Drawing.Size(224, 26);
+            this.menuMemberQ.Text = "회원문의";
+            this.menuMemberQ.Click += new System.EventHandler(this.menuMemberQ_Click);
             // 
-            // 자주하는질문ToolStripMenuItem
+            // menuQandA
             // 
-            this.자주하는질문ToolStripMenuItem.Name = "자주하는질문ToolStripMenuItem";
-            this.자주하는질문ToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.자주하는질문ToolStripMenuItem.Text = "자주하는 질문";
+            this.menuQandA.Name = "menuQandA";
+            this.menuQandA.Size = new System.Drawing.Size(224, 26);
+            this.menuQandA.Text = "자주하는 질문";
+            this.menuQandA.Click += new System.EventHandler(this.menuQandA_Click);
             // 
             // Main
             // 
@@ -268,12 +265,10 @@
         private System.Windows.Forms.ToolStripMenuItem 연체ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 문의ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 이용통계ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 회원검색ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 회원수정ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 회원삭제ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 도서대출ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 대출연장ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 도서반납ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuSearchUser;
+        private System.Windows.Forms.ToolStripMenuItem menuModifyUser;
+        private System.Windows.Forms.ToolStripMenuItem menuLoanBook;
+        private System.Windows.Forms.ToolStripMenuItem menuReturnBook;
         private System.Windows.Forms.ToolStripMenuItem menuSearchBook;
         private System.Windows.Forms.ToolStripMenuItem menuModifyBook;
         private System.Windows.Forms.ToolStripMenuItem menuAddBook;
@@ -281,8 +276,9 @@
         private System.Windows.Forms.ToolStripMenuItem 연체이용자검색ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 도서ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 이용자통계ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 도서문의ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 회원문의ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 자주하는질문ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuBookQ;
+        private System.Windows.Forms.ToolStripMenuItem menuMemberQ;
+        private System.Windows.Forms.ToolStripMenuItem menuQandA;
+        private System.Windows.Forms.ToolStripMenuItem menuLoanExtension;
     }
 }

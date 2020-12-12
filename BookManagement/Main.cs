@@ -16,7 +16,17 @@ namespace BookManagement
         frmLogin _frmLogin;
         frmSearchBook frmSearchBook = null;
         frmModifyBook frmModifyBook = null;
-        frmCheckBook frmCheckbook = null;
+
+        frmSearchUser frmSearchUser = null;
+        frmModifyUser frmModifyUser = null;
+
+        frmLoanBook frmLoanBook = null;
+        frmLoanExtension frmLoanExtension = null;
+        frmReturnBook frmReturnBook = null;
+
+        frmBookQ frmBookQ = null;
+        frmMemberQ frmMemberQ = null;
+        frmQandA frmQandA = null;
 
         public Main()
         {
@@ -81,29 +91,124 @@ namespace BookManagement
             User.UserLoad();
         }
 
-        private void 도서대출ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuSearchUser_Click(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)
             {
-                if (ActiveMdiChild != frmCheckbook)
+                if (ActiveMdiChild != frmSearchUser)
                 {
                     ActiveMdiChild.Close();
                 }
             }
-            frmCheckbook = new frmCheckBook();
-            frmCheckbook.MdiParent = this;
-            frmCheckbook.WindowState = FormWindowState.Maximized;
-            frmCheckbook.Show();
+            frmSearchUser = new frmSearchUser();
+            frmSearchUser.MdiParent = this;
+            frmSearchUser.WindowState = FormWindowState.Maximized;
+            frmSearchUser.Show();
         }
 
-        private void 대출연장ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuModifyUser_Click(object sender, EventArgs e)
         {
-            
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmModifyUser)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmModifyUser = new frmModifyUser();
+            frmModifyUser.MdiParent = this;
+            frmModifyUser.WindowState = FormWindowState.Maximized;
+            frmModifyUser.Show();
         }
 
-        private void 도서반납ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuLoanBook_Click(object sender, EventArgs e)
         {
-            
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmLoanBook)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmLoanBook = new frmLoanBook();
+            frmLoanBook.MdiParent = this;
+            frmLoanBook.WindowState = FormWindowState.Maximized;
+            frmLoanBook.Show();
+        }
+
+        private void menuLoanExtension_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmLoanExtension)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmLoanExtension = new frmLoanExtension();
+            frmLoanExtension.MdiParent = this;
+            frmLoanExtension.WindowState = FormWindowState.Maximized;
+            frmLoanExtension.Show();
+        }
+
+        private void menuReturnBook_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmReturnBook)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmReturnBook = new frmReturnBook();
+            frmReturnBook.MdiParent = this;
+            frmReturnBook.WindowState = FormWindowState.Maximized;
+            frmReturnBook.Show();
+        }
+
+        private void menuBookQ_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmBookQ)
+                {
+                    ActiveMdiChild.Close();
+                }
+                frmBookQ = new frmBookQ();
+                frmBookQ.MdiParent = this;
+                frmBookQ.WindowState = FormWindowState.Maximized;
+                frmBookQ.Show();
+            }
+        }
+
+        private void menuMemberQ_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmMemberQ)
+                {
+                    ActiveMdiChild.Close();
+                }
+                frmMemberQ = new frmMemberQ();
+                frmMemberQ.MdiParent = this;
+                frmMemberQ.WindowState = FormWindowState.Maximized;
+                frmMemberQ.Show();
+            }
+        }
+
+        private void menuQandA_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmQandA)
+                {
+                    ActiveMdiChild.Close();
+                }
+                frmQandA = new frmQandA();
+                frmQandA.MdiParent = this;
+                frmQandA.WindowState = FormWindowState.Maximized;
+                frmQandA.Show();
+            }
         }
     }
 }

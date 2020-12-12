@@ -128,6 +128,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QnA\MemberQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QnA\MemberQ.Designer.cs">
+      <DependentUpon>MemberQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QnA\BookQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QnA\BookQ.Designer.cs">
+      <DependentUpon>BookQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QnA\QandA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QnA\QandA.Designer.cs">
+      <DependentUpon>QandA.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Book\BookModifyForm.resx">
       <DependentUpon>BookModifyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +194,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QnA\MemberQ.resx">
+      <DependentUpon>MemberQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QnA\BookQ.resx">
+      <DependentUpon>BookQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QnA\QandA.resx">
+      <DependentUpon>QandA.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
