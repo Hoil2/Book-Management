@@ -19,6 +19,10 @@ namespace BookManagement
 
         frmSearchUser frmSearchUser = null;
         frmModifyUser frmModifyUser = null;
+
+        frmLoanBook frmLoanBook = null;
+        frmLoanExtension frmLoanExtension = null;
+        frmReturnBook frmReturnBook = null;
         public Main()
         {
             InitializeComponent();
@@ -110,6 +114,51 @@ namespace BookManagement
             frmModifyUser.MdiParent = this;
             frmModifyUser.WindowState = FormWindowState.Maximized;
             frmModifyUser.Show();
+        }
+
+        private void menuLoanBook_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmLoanBook)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmLoanBook = new frmLoanBook();
+            frmLoanBook.MdiParent = this;
+            frmLoanBook.WindowState = FormWindowState.Maximized;
+            frmLoanBook.Show();
+        }
+
+        private void menuLoanExtension_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmLoanExtension)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmLoanExtension = new frmLoanExtension();
+            frmLoanExtension.MdiParent = this;
+            frmLoanExtension.WindowState = FormWindowState.Maximized;
+            frmLoanExtension.Show();
+        }
+
+        private void menuReturnBook_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmReturnBook)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmReturnBook = new frmReturnBook();
+            frmReturnBook.MdiParent = this;
+            frmReturnBook.WindowState = FormWindowState.Maximized;
+            frmReturnBook.Show();
         }
     }
 }

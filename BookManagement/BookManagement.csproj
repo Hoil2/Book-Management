@@ -126,6 +126,24 @@
     <Compile Include="Customer\UserModifyForm.Designer.cs">
       <DependentUpon>UserModifyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoanAndReturn\LoanBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanAndReturn\LoanBook.Designer.cs">
+      <DependentUpon>LoanBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoanAndReturn\LoanExtension.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanAndReturn\LoanExtension.Designer.cs">
+      <DependentUpon>LoanExtension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoanAndReturn\ReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanAndReturn\ReturnBook.Designer.cs">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +202,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\UserModifyForm.resx">
       <DependentUpon>UserModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanAndReturn\LoanBook.resx">
+      <DependentUpon>LoanBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanAndReturn\LoanExtension.resx">
+      <DependentUpon>LoanExtension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanAndReturn\ReturnBook.resx">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
