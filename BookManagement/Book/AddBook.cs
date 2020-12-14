@@ -15,7 +15,6 @@ namespace BookManagement
     public partial class AddBook : Form
     {
         MonthCalendar calendar;
-        string bookDatabasePath = @"Book\BookDatabase.txt";
         public AddBook()
         {
             InitializeComponent();
@@ -74,7 +73,7 @@ namespace BookManagement
                 publisher = txtPublisher.Text,
                 publicationYear = lblPublicationYear.Text,
                 bookStatus = cboxBookStatus.Text,
-                bookLoanPeriod = DateTime.Now.AddDays(14).ToString("yyyy-MM-dd")
+                bookLoanPeriod = ""
             };
             Book.database.Add(bookInfo);
             Book.BookSave();

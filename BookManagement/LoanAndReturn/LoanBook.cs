@@ -64,6 +64,27 @@ namespace BookManagement
                 }
 
                 bookInfo.bookStatus = "대출중";
+                //bookInfo.bookLoanPeriod = DateTime.Now.AddDays(14).ToString("yyyy-MM-dd");
+
+                // 대출 목록에 추가
+                foreach(var item in Customer.User.database)
+                {
+                    if (item.userID.Equals(txtUserID.Text))
+                    {
+                        LoanInfo loanInfo = new LoanInfo()
+                        {
+                            userID = txtUserID.Text,
+                            userName = Customer.User.FindName(txtUserID.Text),
+                            bookNumber = bookInfo.bookNumber,
+                            returnDate = DateTime.Now.AddDays(14).ToString("yyy-MM-dd")
+                        };
+                        Loan.database.Add(loanInfo);
+                        Loan.LoanSave();
+                        break;
+                    }
+                }
+                
+
                 button.Text = "대출완료";
                 button.Enabled = false;
                 Book.BookSave();

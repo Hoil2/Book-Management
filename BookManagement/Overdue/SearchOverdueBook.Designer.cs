@@ -1,6 +1,7 @@
-﻿namespace BookManagement
+﻿
+namespace BookManagement
 {
-    partial class frmReturnBook
+    partial class frmSearchOverdueBook
     {
         /// <summary>
         /// Required designer variable.
@@ -50,22 +51,23 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(235, 42);
+            this.label2.Location = new System.Drawing.Point(214, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 21);
+            this.label2.Size = new System.Drawing.Size(136, 21);
             this.label2.TabIndex = 18;
-            this.label2.Text = "반납";
+            this.label2.Text = "연체도서검색";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tlpBookList
             // 
             this.tlpBookList.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tlpBookList.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tlpBookList.ColumnCount = 2;
-            this.tlpBookList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tlpBookList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpBookList.ColumnCount = 3;
+            this.tlpBookList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tlpBookList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpBookList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpBookList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tlpBookList.Location = new System.Drawing.Point(136, 101);
+            this.tlpBookList.Location = new System.Drawing.Point(106, 101);
             this.tlpBookList.Name = "tlpBookList";
             this.tlpBookList.RowCount = 15;
             this.tlpBookList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -83,7 +85,7 @@
             this.tlpBookList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpBookList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpBookList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpBookList.Size = new System.Drawing.Size(305, 260);
+            this.tlpBookList.Size = new System.Drawing.Size(362, 260);
             this.tlpBookList.TabIndex = 17;
             // 
             // btnSearchBook
@@ -115,7 +117,7 @@
             this.txtbookName.Size = new System.Drawing.Size(160, 21);
             this.txtbookName.TabIndex = 14;
             // 
-            // frmReturnBook
+            // frmSearchOverdueBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +129,7 @@
             this.Controls.Add(this.btnSearchBook);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbookName);
-            this.Name = "frmReturnBook";
+            this.Name = "frmSearchOverdueBook";
             this.ResumeLayout(false);
             this.PerformLayout();
 

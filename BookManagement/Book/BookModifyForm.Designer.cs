@@ -41,13 +41,15 @@
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtReturnDate = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnModify
             // 
             this.btnModify.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModify.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnModify.Location = new System.Drawing.Point(136, 203);
+            this.btnModify.Location = new System.Drawing.Point(136, 235);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(113, 46);
             this.btnModify.TabIndex = 21;
@@ -144,7 +146,7 @@
             // 
             this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnRemove.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnRemove.Location = new System.Drawing.Point(18, 203);
+            this.btnRemove.Location = new System.Drawing.Point(18, 235);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(113, 46);
             this.btnRemove.TabIndex = 27;
@@ -156,7 +158,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancel.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(255, 203);
+            this.btnCancel.Location = new System.Drawing.Point(255, 235);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(113, 46);
             this.btnCancel.TabIndex = 28;
@@ -164,11 +166,30 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtReturnDate
+            // 
+            this.txtReturnDate.Location = new System.Drawing.Point(130, 198);
+            this.txtReturnDate.Name = "txtReturnDate";
+            this.txtReturnDate.Size = new System.Drawing.Size(200, 21);
+            this.txtReturnDate.TabIndex = 30;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(32, 198);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 21);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "반납일";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmBookModifyWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(384, 299);
+            this.Controls.Add(this.txtReturnDate);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.txtAuthor);
@@ -204,5 +225,7 @@
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtReturnDate;
+        private System.Windows.Forms.Label label6;
     }
 }

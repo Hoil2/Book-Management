@@ -125,5 +125,25 @@ namespace BookManagement.Customer
             }
             return "";
         }
+
+        public static string FindName(string id)
+        {
+            foreach(var item in database) 
+            { 
+                if (item.userID.Equals(id))
+                    return item.userName;
+            }
+            return "";
+        }
+
+        public static UserInfo FindUser(string id)
+        {
+            foreach(var item in database)
+            {
+                if (item.userID.Equals(id))
+                    return item;
+            }
+            return new UserInfo();
+        }
     }
 }

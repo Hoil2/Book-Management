@@ -21,6 +21,8 @@ namespace BookManagement
             txtPublisher.Text = bookInfo.publisher;
             txtPublicationYear.Text = bookInfo.publicationYear;
             txtBookStatus.Text = bookInfo.bookStatus;
+            txtReturnDate.Text = Loan.FindReturnDate(bookInfo.bookNumber);
+
             bookNumber = bookInfo.bookNumber;
         }
 
@@ -52,6 +54,16 @@ namespace BookManagement
             book.bookStatus = txtBookStatus.Text;
 
             Book.BookSave();
+
+            foreach(var item in Loan.database)
+            {
+                if(item.bookNumber.Equals(bookNumber))
+                {
+                    item.returnDate = txtReturnDate.Text;
+                    Loan.LoanSave();
+                    break;
+                }
+            }
 
             MessageBox.Show("수정 완료");
             Close();

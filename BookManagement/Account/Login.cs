@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -75,6 +76,13 @@ namespace BookManagement
                 {
                     successLogin = true;
                     Book.BookLoad(); // 도서들 파일에서 불러오기
+
+                    DirectoryInfo di = new DirectoryInfo(@"Loan"); // 대출 폴더 없으면 만들기
+                    if (!di.Exists) di.Create();
+
+                    Loan.LoanLoad(); // 대출 파일에서 불러오기
+                    //Loan.database[0].returnDate = "2020-12-13";
+                    //Loan.LoanSave();
                     Close();
                 }
                 else // 비밀번호 틀렸을 때

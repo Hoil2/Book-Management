@@ -61,12 +61,20 @@ namespace BookManagement
             {
                 button.Text = "연장완료";
                 button.Enabled = false;
-                DateTime beforeDate = Convert.ToDateTime(bookInfo.bookLoanPeriod);
-                DateTime afterDate = beforeDate.AddDays(7);
-                bookInfo.bookLoanPeriod = afterDate.ToString("yyyy-MM-dd");
-                Book.BookSave();
-                MessageBox.Show(beforeDate.ToString("yyyy-MM-dd") + " -> " + afterDate.ToString("yyyy-MM-dd") + 
-                    Environment.NewLine + "으로 연장 완료");
+
+                foreach(var item in Loan.database)
+                {
+                    if(item.bookNumber.Equals(bookInfo.bookNumber))
+                    {
+                        DateTime beforeDate = Convert.ToDateTime(item.returnDate);
+                        DateTime afterDate = DateTime.Now.AddDays(7);
+                        item.returnDate = afterDate.ToString("yyyy-MM-dd");
+                        MessageBox.Show(beforeDate.ToString("yyyy-MM-dd") + " -> " + afterDate.ToString("yyyy-MM-dd") +
+                            Environment.NewLine + "으로 연장 완료");
+                        Loan.LoanSave();
+                        break;
+                    }
+                }
             });
             tlpBookList.Controls.Add(button, 1, row);
         }

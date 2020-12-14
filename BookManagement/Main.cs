@@ -23,12 +23,16 @@ namespace BookManagement
         frmLoanBook frmLoanBook = null;
         frmLoanExtension frmLoanExtension = null;
         frmReturnBook frmReturnBook = null;
+
+        frmSearchOverdueBook frmSearchOverdueBook = null;
+        frmSearchOverdueUser frmSearchOverdueUser = null;
         public Main()
         {
             InitializeComponent();
             _frmLogin = new frmLogin();
             _frmLogin.FormClosed += new FormClosedEventHandler(LoginFail);
-            Book.database = new List<BookInfo>(); // 도서 파일 초기화
+            Book.database = new List<BookInfo>(); // 도서 리스트 초기화
+            Loan.database = new List<LoanInfo>(); // 대출 리스트 초기화
         }
 
         void LoginFail(object sender, FormClosedEventArgs e)
@@ -159,6 +163,36 @@ namespace BookManagement
             frmReturnBook.MdiParent = this;
             frmReturnBook.WindowState = FormWindowState.Maximized;
             frmReturnBook.Show();
+        }
+
+        private void menuSearchOverdueBook_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmSearchOverdueBook)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmSearchOverdueBook = new frmSearchOverdueBook();
+            frmSearchOverdueBook.MdiParent = this;
+            frmSearchOverdueBook.WindowState = FormWindowState.Maximized;
+            frmSearchOverdueBook.Show();
+        }
+
+        private void menuSearchOverdueUser_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild != frmSearchOverdueUser)
+                {
+                    ActiveMdiChild.Close();
+                }
+            }
+            frmSearchOverdueUser = new frmSearchOverdueUser();
+            frmSearchOverdueUser.MdiParent = this;
+            frmSearchOverdueUser.WindowState = FormWindowState.Maximized;
+            frmSearchOverdueUser.Show();
         }
     }
 }

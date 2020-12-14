@@ -59,9 +59,23 @@ namespace BookManagement
             button.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
             button.Click += new EventHandler(delegate
             {
+                bookInfo.bookStatus = "대출가능";
+                //bookInfo.bookLoanPeriod = "";
+
                 button.Text = "반납완료";
                 button.Enabled = false;
-                bookInfo.bookStatus = "대출가능";
+
+                // 대출목록에서 삭제
+                foreach (var item in Loan.database) 
+                {
+                    if(item.bookNumber.Equals(bookInfo.bookNumber))
+                    {
+                        Loan.database.Remove(item);
+                        Loan.LoanSave();
+                        break;
+                    }
+                }
+
                 Book.BookSave();
                 MessageBox.Show("반납 성공");
             });
